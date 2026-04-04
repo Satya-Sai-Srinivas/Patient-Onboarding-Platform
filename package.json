@@ -1,0 +1,27 @@
+{
+  "name": "patient-onboarding",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Patient onboarding monorepo — web kiosk/dashboard, mobile app, and FastAPI backend",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:web": "pnpm --filter patient-checkin dev",
+    "dev:mobile": "pnpm --filter patient-checkin-app start",
+    "dev": "pnpm run dev:web & pnpm run dev:mobile",
+    "build:web": "pnpm --filter patient-checkin build",
+    "lint:web": "pnpm --filter patient-checkin lint",
+    "lint:mobile": "pnpm --filter patient-checkin-app tsc --noEmit",
+    "format": "prettier --write \"apps/**/*.{ts,tsx,js,jsx,json}\"",
+    "format:check": "prettier --check \"apps/**/*.{ts,tsx,js,jsx,json}\"",
+    "install:all": "pnpm install && cd backend && pip install -r requirements.txt"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

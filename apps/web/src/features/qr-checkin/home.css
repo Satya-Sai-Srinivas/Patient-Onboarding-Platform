@@ -1,0 +1,264 @@
+/* [新增] 重置全局样式 */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* ======= 页面整体：左右各占 50% ======= */
+.qc-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  height: 100vh;
+  background: #fff;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* ======= 左半边：两张背景图叠加 ======= */
+.qc-left {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  height: 100%;
+}
+
+/* ... 后面的代码保持不变 ... */
+
+.qc-left-img {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  will-change: background-position, background-size, opacity;
+  pointer-events: none;
+}
+
+.qc-left-img1 { 
+  opacity: 1; 
+}
+
+.qc-left-img2 {
+  opacity: .35;
+  mix-blend-mode: multiply;
+}
+
+/* ======= 登录卡片 ======= */
+.qc-login-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  padding: 28px 32px 22px;
+}
+
+.qc-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.qc-logo-icon {
+  width: 57px;
+  height: 43px;
+}
+
+.qc-logo-title {
+  font-family: Merriweather, serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #000;
+}
+
+.qc-sub {
+  color: #9CA3AF;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  margin: 16px 0 20px;
+}
+
+/* 输入与按钮 */
+.qc-otp {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+}
+
+.qc-label {
+  width: 264px;
+  text-align: left;
+  color: #000;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.qc-input {
+  width: 264px;
+  height: 41px;
+  border-radius: 8px;
+  border: 1px solid #9CA3AF;
+  padding: 0 12px;
+  outline: none;
+}
+
+.qc-input::placeholder {
+  color: #9CA3AF;
+}
+
+.qc-btn-primary {
+  width: 161px;
+  height: 55px;
+  border-radius: 150px;
+  background: #2463EB;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.qc-btn-primary:active { 
+  transform: translateY(1px); 
+}
+
+.qc-tip {
+  margin-top: 14px;
+  text-align: center;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}
+
+/* ======= 右半边 ======= */
+.qc-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 40px;
+  min-height: 100dvh;
+}
+
+.qc-right-inner {
+  width: 100%;
+  max-width: 680px;
+}
+
+.qc-title {
+  font-family: Merriweather, serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.qc-title-sub {
+  color: #6b7280;
+  margin: 0 0 22px;
+}
+
+/* 卡片容器 */
+.qc-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Quick Access 卡片 */
+.qc-role-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 18px 20px;
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+
+.qc-role--clickable {
+  cursor: pointer;
+}
+
+.qc-role--clickable:hover {
+  border-color: #2463EB;
+  box-shadow: 0 0 0 3px rgba(36,99,235,.15);
+}
+
+.qa-left {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.qa-icon { 
+  width: 32px; 
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.qa-h { 
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+.qa-p { 
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* 按钮样式 */
+.qa-btn {
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  cursor: pointer;
+  border: 1px solid #2463EB;
+  color: #2463EB;
+  background: #fff;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.qa-btn:hover {
+  opacity: 0.9;
+}
+
+.qa-btn--filled {
+  background: #2463EB;
+  color: #fff;
+  border-color: #2463EB;
+}
+
+.qa-btn--outline {
+  background: #fff;
+  color: #2463EB;
+  border: 1px solid #2463EB;
+}

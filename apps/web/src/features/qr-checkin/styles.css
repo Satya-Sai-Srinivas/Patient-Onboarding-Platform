@@ -1,0 +1,74 @@
+.qr-home .quick__title { margin-bottom: 4px; }
+.qr-home .card { padding: 32px; }
+
+/* ========== Component 1: Patient Tile ========== */
+
+.qr-home .card.option {
+  width: 640px;              /* Figma: width 640 */
+  height: 100px;             /* Figma: height 100 */
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--pulse-bg, #E9EFFC);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  transition: border-color 120ms ease, box-shadow 120ms ease,
+    transform 80ms ease;
+}
+
+/* 悬浮态（Figma: optionhover） */
+.qr-home .card.option:hover,
+.qr-home .card.option:focus-visible {
+  border-color: var(--pulse-primary, #2463EB);
+  box-shadow: 0 0 0 3px rgba(36, 99, 235, 0.1);
+}
+
+/* 左侧区域 */
+.qr-home .card.option .tile-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* 图标大小与颜色 */
+.qr-home .card.option .tile-icon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+}
+
+/* 文本 */
+.qr-home .card.option .tile-title {
+  font-family: var(--font-heading, "Merriweather", serif);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--pulse-dark, #000);
+}
+
+.qr-home .card.option .tile-subtitle {
+  margin-top: 2px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 14px;
+  color: var(--pulse-gray, #9CA3AF);
+}
+
+/* 右侧按钮（和你主色保持一致） */
+.qr-home .btn-primary {
+  height: var(--btn-height, 48px);
+  padding: 0 20px;
+  border-radius: 12px;
+  border: none;
+  background: var(--pulse-primary, #2463EB);
+  color: #fff;
+  font-weight: 600;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+.qr-home .btn-primary:hover {
+  filter: brightness(1.05);
+}
+

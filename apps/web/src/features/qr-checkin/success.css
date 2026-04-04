@@ -1,0 +1,169 @@
+/* color */
+:root{
+  --brand-blue:#2463EB;
+  --panel-bg:#E9EFFC;     
+  --panel-border:#9CA3AF;
+}
+
+/* =topbar=== */
+.qr-topbar{
+  position:sticky; top:0; z-index:10;
+  height:64px; display:grid; grid-template-columns:1fr auto 1fr;
+  align-items:center; padding:0 24px;
+  border-bottom:1px solid #e5e7eb; background:#fff;
+}
+
+.top-center{ justify-self:center; display:inline-flex; align-items:center; gap:10px; }
+
+.top-center .logo{ width:28px; height:28px; }
+
+.top-center .top-title{ font-family:Inter,system-ui; font-weight:700; font-size:20px; }
+
+.top-right{ width:64px; height:1px; }
+
+.back-home{
+  justify-self:start; display:inline-flex; align-items:center; gap:10px;
+  height:42px; padding:0 14px; border:1px solid #d1d5db; background:#fff;
+  border-radius:8px; cursor:pointer; transition:all .15s ease;
+}
+
+.back-home:focus-visible{ outline:2px solid var(--brand-blue); outline-offset:2px; }
+
+.back-icon{ width:16px; height:16px; display:block; }
+
+.back-text{ font-weight:700; font-size:18px; line-height:1; }
+
+.back-home:hover{ background:var(--brand-blue); color:#fff; border-color:var(--brand-blue); }
+
+.back-home:hover .back-icon{ filter:brightness(0) invert(1); }
+
+/* ==mid card== */
+.success-card{
+  margin:56px auto;
+  width:640px;
+  padding:32px 36px 28px;
+  border-radius:12px;
+  background:var(--panel-bg);
+  border:1px solid var(--panel-border);
+  box-shadow:0 2px 6px rgba(0,0,0,.06);
+  text-align:left;
+}
+
+/* green circle */
+.success-head{
+  display:flex; align-items:center; justify-content:center; gap:16px;
+  margin-bottom:20px;
+}
+
+.check-badge{
+  width:81px; height:81px; border-radius:50%;
+  background:#2AAA59; display:flex; align-items:center; justify-content:center;
+  flex:0 0 81px;
+}
+
+.check-badge img{ width:57px; height:57px; }
+
+.success-title{
+  font-family:Inter, system-ui; font-size:32px; font-weight:700; line-height:1.2; color:#000;
+}
+
+/* white card */
+.ticket{
+  width:553px; 
+  min-height:221px;
+  margin:12px auto 16px;
+  border-radius:8px; 
+  background:#fff; 
+  border:1px solid var(--panel-border);
+  padding:24px 24px 32px 24px; 
+  display:flex;
+  flex-direction:column;
+  gap:16px; 
+}
+
+/* Your Appointment Number */
+.ticket-caption{
+  color:#000; 
+  font-family:Inter, system-ui; 
+  font-size:16px;  /* 16px */
+  font-weight:400; 
+  line-height:20px;
+  text-align:center; 
+  margin:0; 
+}
+
+.ticket-num{
+  color:var(--brand-blue); 
+  font-family:Inter, system-ui; 
+  font-size:48px;  
+  font-weight:700; 
+  line-height:1.2; 
+  text-align:center; 
+  margin:0; 
+}
+
+
+.ticket-row{
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between;
+  margin-top:8px; 
+}
+
+.ticket-label{
+  color:#000; 
+  font-family:Inter, system-ui; 
+  font-size:16px; 
+  font-weight:400; 
+  line-height:20px;
+}
+
+.ticket-time{
+  color:#000; 
+  font-family:Inter, system-ui; 
+  font-size:16px; 
+  font-weight:700; 
+  line-height:20px;
+}
+
+
+.success-note{
+  color:#000; 
+  font-family:Inter, system-ui; 
+  font-size:16px; 
+  line-height:20px;
+  margin:8px auto 16px; 
+  width:553px;
+}
+
+/* View Queue */
+.btn-view-queue{
+  width:553px; 
+  height:58px; 
+  margin:0 auto;
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  border-radius:8px; 
+  border:1px solid var(--panel-border);
+  background:#fff; 
+  color:#000;
+  font-family:Inter, system-ui; 
+  font-size:16px; 
+  font-weight:400; 
+  line-height:20px;
+  cursor:pointer; 
+  transition:background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+
+.btn-view-queue:hover{
+  background:var(--brand-blue); 
+  color:#fff; 
+  border-color:var(--brand-blue);
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.btn-view-queue:focus-visible{ 
+  outline:2px solid var(--brand-blue); 
+  outline-offset:2px; 
+}
