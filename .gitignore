@@ -75,3 +75,6 @@ lerna-debug.log*
 *.sw?
 *.pem
 Thumbs.db
+
+*.sql
+*.dump
